@@ -1,0 +1,27 @@
+
+    classDiagram
+        class Restaurant{
+            +int id
+            +str name
+            +str location
+            +str type
+            +list services
+            +__init__(id: int, name: str, location: str, type: str)
+            +add_service(service: Service)
+        }
+        class Service{
+            +int id
+            +str description
+            +float price
+            +__init__(id: int, description: str, price: float)
+        }
+        class Catboy{
+            +int id
+            +str name
+            +int age
+            +str costume
+            +__init__(id: int, name: str, age: int, costume: str)
+        }
+        Restaurant -- Service: offers
+        Service -- Catboy: involves
+    

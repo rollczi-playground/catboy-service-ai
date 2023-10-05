@@ -1,0 +1,12 @@
+
+    sequenceDiagram
+        participant M as Main
+        participant R as Restaurant
+        participant S as Service
+        participant C as Catboy
+        M->>R: create_restaurant(id, name, location, type)
+        M->>S: create_service(id, description, price)
+        M->>C: create_catboy(id, name, age, costume)
+        R->>S: add_service(service)
+        S->>C: assign_catboy(catboy)
+    
